@@ -1,0 +1,38 @@
+﻿@model StudentRegestrationSystem.Models.payment;
+
+@{
+    ViewData["Title"] = "Payment";
+}
+
+<h1>Payment</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="payment">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Studentid" class="control-label"></label>
+                <input asp-for="Studentid" class="form-control" />
+                <span asp-validation-for="Studentid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Courseid" class="control-label"></label>
+                <input asp-for="Courseid" class="form-control" />
+                <span asp-validation-for="Courseid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaymentAmount" class="control-label"></label>
+                <input asp-for="PaymentAmount" class="form-control" />
+                <span asp-validation-for="PaymentAmount" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Pay" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
